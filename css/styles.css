@@ -1,0 +1,97 @@
+
+/*=============================================
+=                  Web Fonts                  =
+=============================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap');
+
+
+/*=============================================
+=                 Base Styes                  =
+=============================================*/
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: rgb(255, 255, 255);
+    font-family: 'Titillium Web', sans-serif;
+    margin-bottom: 1.5rem;
+    font-size: 1.2em;
+    line-height: 1.65rem;
+}
+main {
+    text-align: center;
+}
+
+img {
+    width: 90%;
+}
+footer {
+    border-top: 1px black solid;
+    margin: 1rem;
+}
+p {
+    font-size: 1.15rem;
+}
+
+
+
+
+
+
+
+
+/*=============================================
+=                  Main Styles                =
+=============================================*/
+.main-nav ul {
+    padding: 0 10px;
+}
+
+.main-nav li {
+    list-style: none;
+    text-align: center;
+    background-color: rgb(247, 247, 247);
+    padding: 10px 0;
+    margin-top: 10px;
+}
+.main-nav li:first-child {
+    font-weight: bold;
+    font-size: 1.5rem;
+    background-color:inherit;
+}
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+}
+#portfolio {
+    background-color: whitesmoke;
+    padding: 1rem 1rem;
+}
+#portfolio h1 {
+    padding-bottom: 1rem;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: bold;
+}
+#portfolio h2 {
+    font-size: 1.3rem;
+}
+#footer-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+/* #footer-nav li:nth-child(-n+3) {
+    display: none;
+} */
+
+
+
+/*=============================================
+=                 Media Queries               =
+=============================================*/
+
+
+
+
