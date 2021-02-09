@@ -83,6 +83,17 @@ footer li:last-child {
 =                 Media Queries               =
 =============================================*/
 
-
+@media screen and (min-width: 768px) {
+    footer li {
+        border: 1px solid red;
+    }
+    footer li:not(:first-child):not(:last-child){
+        display: inline;
+        float: right;
+    }
+    footer li:last-child {
+        display: none;
+    }
+}
 
 
