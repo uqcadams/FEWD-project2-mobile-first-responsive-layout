@@ -1,0 +1,215 @@
+/*=============================================
+=                    Notes                    =
+===============================================
+/
+/ Background color -> #fafafa
+/ Panel color -> #fff
+/ 
+/
+=============================================*/
+
+/*=============================================
+=                  Web Fonts                  =
+=============================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;600&display=swap');
+
+
+/*=============================================
+=                 Base Styes                  =
+=============================================*/
+* {
+    box-sizing: border-box;
+}
+body {
+    text-align: center;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 300;
+    background-color: #fafafa;
+    line-height: 1.65rem;
+}
+header {
+    padding-top: 40px;
+}
+main {
+    background-color: #fff;
+}
+footer {
+    border-top: 1px solid grey;
+    padding-bottom: 3rem;
+}
+h1 {
+    font-weight: 900;
+}
+p {
+    width: 85%;
+    margin: 0 auto;
+    padding-bottom: 1rem;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+img {
+    width: 100%;
+}
+
+
+
+/*=============================================
+=                  Main Styles                =
+=============================================*/
+#contact {
+    background-color: #fafafa;
+    padding-top: 2rem;
+    margin-bottom: 2rem;
+}
+#header-banner {
+    background-color: red;
+}
+#contact h1 {
+    text-transform: uppercase;
+}
+#portfolio h1 {
+    text-transform: uppercase;
+}
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.main-nav li {
+    background-color: #fff;
+    padding: 10px 0;
+    margin: 1rem 0;
+    text-transform: uppercase;
+}
+
+.portfolio-main {
+    padding: 1rem 0;
+}
+footer li:not(:first-child):not(:last-child){
+    display: none;
+}
+footer li:not(:first-child) {
+    text-transform: uppercase;
+}
+footer li:first-child {
+    float: left;
+}
+footer li:last-child {
+    float: right;
+}
+
+
+
+
+/*=============================================
+=                 Media Queries               =
+=============================================*/
+
+@media screen and (min-width: 768px) {
+    footer li {
+        border: 1px solid red;
+    }
+    footer li:not(:first-child):not(:last-child){
+        display: inline;
+        float: right;
+    }
+    footer li:last-child {
+        display: none;
+    }
+    .student-profile {
+        display: inline-block;
+        text-align: left;
+    }
+    .student-profile p {
+        display: inline-block;
+        font-size: 2vw;
+        line-height: 2rem;
+        color: darkgray;
+        margin-left: 0;
+        width: 58%;
+    }
+    .student-img {
+        float: right;
+        width: 40%;
+    }
+    .portfolio {
+        display: inline-block;
+        vertical-align: top;
+        height: 100%;
+        width: 48%;
+        margin-bottom: 2rem;
+        margin-right: 10px;
+    }
+    .main-nav li {
+        display: inline-block;
+        background-color: transparent;
+        font-weight: bold;
+        padding: 0 20px;
+    }
+    #contact {
+        width: 60%;
+        margin: auto;
+    }
+    .name {
+        vertical-align: bottom;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .name {
+        float: left;
+        margin-bottom: 16PX 0;
+        padding-bottom: 0;
+    }
+    /* .main-nav {
+        
+    } */
+    .main-nav li {
+        /* display: inline-block; */
+        background-color: transparent;
+        float: right;
+        font-weight: bold;
+        padding: 0 20px;
+    }
+    .student-profile {
+        display: inline-block;
+        text-align: left;
+    }
+    .student-profile p {
+        display: inline-block;
+        font-size: 2vw;
+        line-height: 2rem;
+        color: darkgray;
+        margin-left: 0;
+        width: 58%;
+    }
+    .student-img {
+        float: right;
+        width: 40%;
+    }
+    .portfolio {
+        display: inline-block;
+        vertical-align: top;
+        height: 100%;
+        width: 32%;
+    }
+    footer li {
+        border: 1px solid red;
+    }
+    footer li:not(:first-child):not(:last-child){
+        display: inline;
+        float: right;
+    }
+    footer li:last-child {
+        display: none;
+    }
+}
+
+

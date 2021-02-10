@@ -1,99 +1,279 @@
 
 /*=============================================
-=                  Web Fonts                  =
+=             Font and typography             =
 =============================================*/
 
-@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap');
+/* imports the Titillium font from google fonts in 300 and 600 weights */
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;600&display=swap');
 
 
 /*=============================================
-=                 Base Styes                  =
+=                General Styles               =
 =============================================*/
-* {
+
+/* Sets the universal styling */
+* { 
     box-sizing: border-box;
 }
+
+/* Styles for whole website - centred, black text */
 body {
     text-align: center;
-    font-family: 'Titillium Web', sans-serif;
+    color: rgb(119, 119, 119);
     background-color: #fafafa;
-    line-height: 1.65rem;
+    font-family: 'Titillium Web', sans-serif;
 }
+h1 {
+    text-transform: uppercase;
+    color: black;
+    font-size: 0.9rem;
+}
+/* Removes bullets and indents on unordered lists */
 ul {
-    list-style: none;
-    padding: 0;
+    list-style: none; /* removes bullet mark */
+    padding: 0;  /* 0 padding to remove indent */  
 }
 
+/* Remove underline and use body colour scheme  */
 a {
     text-decoration: none;
-    color: black;
+    color: inherit;
 }
-p {
-    width: 85%;
-    margin: 0 auto;
-    padding-bottom: 1rem;
+
+/*=============================================
+=               Utility Styles                =
+=============================================*/
+
+/* wrapper to standardise width of document */
+.wrapper {
+    width: 90%;
+    margin: auto;
+}
+
+/* Clearfix code used to address spacing issues with multiple floated elements */
+/* Applied to: header (.top-nav) and footer (div) */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+
+
+/*=============================================
+=           Top Navigation Styling            =
+=============================================*/
+header {  /* temporary to view sizing */
+    border: 1px solid orange; 
+}
+.top-nav {
+    border: 1px solid blue; /* temporary to view objects */
+    width: 100%;
+}
+.top-nav h1 {
+    border: 1px solid red; /* temporary to view objects */
+}
+.top-nav ul {
+    border: 1px solid green; /* temporary to view objects */
+}
+.top-nav li {
+    border: 1px solid red; /* temporary to view objects */
+    margin: 1rem 0; /* space between top and bottom, but extent to sides */
+    padding: 1rem 0; /* add top/bottom padding within buttons */
+    background-color: #fff; /*introduce contrast against background */
+    text-transform: uppercase; /* uppercase words */
+    font-weight: 600; /* emboldens nav button text */
+    font-size: 1.2rem; /* increases font size */
+}
+
+/*=============================================
+=          Student Profile Styling            =
+=============================================*/
+
+.profile {
+    border: 1px solid red;
+    font-size: 5.4vw; /* responsive text that adjusts with shifting width of viewport */
+    padding: 2rem 0; /* add padding space at top and bottom of container */
+}
+.profile img {
+    width: 70%; /* resize image with size of viewing panel */
+}
+
+/*=============================================
+=             Portfolio Styling               =
+=============================================*/
+main section {
+    border: 1px solid red;
+}
+.portfolio div {
+    border: 1px solid blue;
+    padding-bottom: 7vw;
 }
 img {
     width: 100%;
 }
-main {
-    background-color: #fff;
+
+/*=============================================
+=              Contact Styling                =
+=============================================*/
+
+.contact {
+    border: 1px solid red; /* temporary to view objects */
+    font-size: 5.4vw; /* responsive text sizing in line with mockup */
+    padding: 2rem 0; /* add padding space at top and bottom of container */
+    border-bottom: 1px solid grey;
+}
+
+/*=============================================
+=          Bottom Navigation Styling          =
+=============================================*/
+
+.bottom-nav {
+    border: 1px solid green; /* temporary to view objects */
+    display: none; /* navigation items hidden on mobile view */
+}
+.bottom-nav li {
+    border: 1px solid red; /* temporary to view objects */
 }
 footer {
-    border-top: 1px solid grey;
-    padding-bottom: 3rem;
+    border: 1px solid blue; /* temporary to view objects */
 }
-
-
-/*=============================================
-=                  Main Styles                =
-=============================================*/
-#contact {
-    background-color: #fafafa;
-    padding-top: 2rem;
+footer h1 {
+    border: 1px solid red; /* temporary to view objects */
+    display: inline-block;
 }
-.wrapper {
-    width: 90%;
-    margin: 0 auto;
+footer .student-name {
+    float: left; /* floats student name left */
+    margin-left: 20px; /* matches header margin */
 }
-
-.main-nav li {
-    background-color: #fff;
-    padding: 10px 0;
-    margin: 1rem 0;
-}
-
-.portfolio {
-    padding: 1rem 0;
-}
-footer li:not(:first-child):not(:last-child){
-    display: none;
-}
-footer li:first-child {
-    float: left;
-}
-footer li:last-child {
+.to-top {
     float: right;
+    margin-right: 20px; /* matches top margin */
 }
-#contact {
-    margin-bottom: 2rem;
-}
-
 
 /*=============================================
-=                 Media Queries               =
+=                Media Queries                =
 =============================================*/
 
 @media screen and (min-width: 768px) {
-    footer li {
-        border: 1px solid red;
+    
+    /* top navigation adjustments */
+    .top-nav li {
+        display: inline-block; /* displays nav items horizontally, inline with one another */
+        margin: 10px 20px; /* creates a top margin to separate from header, and spaces between objects */
+        padding:20px; /* increases horizontal padding for clickable area */
     }
-    footer li:not(:first-child):not(:last-child){
-        display: inline;
+
+    /* student profile */
+    .profile {
+        border: 1px solid red;
+        font-size: 3.4vw; /* responsive text that adjusts with shifting width of viewport */
+    }
+    .profile img {
+        width: 40%; /* resize image with size of viewing panel */
         float: right;
     }
-    footer li:last-child {
-        display: none;
+    .profile p {
+        text-align: left; /* aligns all the text on the left of the cell */
+        margin: 0;
+    }
+
+    /* portfolio styling */
+    .portfolio-piece {
+        display: inline-block;
+        vertical-align: top;
+        height: 100%;
+        width: 48%;
+        margin-left: 6px;
+        margin-right: 6px;
+    }
+
+    /* contact styling */
+    .contact {
+        font-size: 2.4vw; /* responsive text sizing in line with mockup */
+        padding: 2rem 0; /* add padding space at top and bottom of container */
+    }
+    .contact p {
+        width: 70%; /* narrows the presentation of text in window */
+        padding: 3vw 0; /* standardises responsive padding on window resize */
+        margin: auto; /* re-centres content */
+    }
+    .contact h1 {
+        font-size: 2vw;
+    }
+
+    /* bottom navigation adjustments */
+    .to-top {
+        display: none; /* hides "back to top" */
+    }
+    .bottom-nav, li{ /* selects ul and li items */
+        display: inline-block; /* displays horizontally */
+    }
+    .bottom-nav li {
+        margin: 0 10px; /* creates a top margin to separate from header, and spaces between objects */
+    }
+    .bottom-nav {
+        float: right;
+        padding: 10px 0;
+        margin-right: 20px;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+    
+    /* top navigation adjustments */
+    .top-nav .student-name {
+        float: left; /* floats student name left */
+        margin-left: 20px; /* matches li padding */
+    }
+    .top-nav ul {
+        float: right; /* floats menu to the right */
+        margin: 0 auto;
+    }
+
+    /* student profile adjustments */
+    .profile {
+        font-size: 2.4vw; /* responsive text that adjusts with shifting width of viewport */
+    }
+    .profile img {
+        margin-left: 1.6rem;
+    }
+
+    /* portfolio styling */
+    .portfolio-piece {
+        display: inline-block;
+        vertical-align: top;
+        height: 100%;
+        width: 32%;
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+
+    /* contact styling */
+    .contact {
+        font-size: 2.4vw; /* responsive text sizing in line with mockup */
+        padding: 2rem 0; /* add padding space at top and bottom of container */
+    }
+    .contact p {
+        width: 65%; /* narrows the presentation of text in window */
+        padding: 3vw 0; /* standardises responsive padding on window resize */
+        margin: auto; /* re-centres content */
+    }
+    .contact h1 {
+        font-size: 2vw;
     }
 }
 
 
+
+/*=============================================
+=           Things left to complete           =
+===============================================
+/
+/ margin collapse, student-profile top
+/ profile and contact have same text; combine?
+/ footer wrapper, text size, margins
+/
+/
+/=====  End of Things left to complete  ======*/
