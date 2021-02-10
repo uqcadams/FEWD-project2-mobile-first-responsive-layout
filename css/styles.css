@@ -113,7 +113,8 @@ header {
 =             Main Content Styling            =
 =============================================*/
 main {
-    background-color: #fff;;
+    background-color: #fff;
+    padding-bottom: 5vw;
 }
 .content {
     padding-bottom: 2rem;
@@ -218,6 +219,9 @@ footer .student-name {
     }
 
     /* main content styling */
+    main {
+        padding-bottom: 2.5vw;
+    }
     .column {
         display: inline-block;
         vertical-align: top;
